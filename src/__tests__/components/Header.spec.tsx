@@ -1,7 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { RouterContext } from 'next/dist/next-server/lib/router-context';
+
 
 import Header from '../../components/Header';
+import { RouterContext } from 'next-server/dist/lib/router-context';
+
 
 const mockedPush = jest.fn();
 let RouterWrapper;
