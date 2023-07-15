@@ -1,5 +1,0 @@
-{
-  "repositoryName": "spacetravelidesafio",
-  "adapter": "@slicemachine/adapter-next",
-  "libraries": ["./slices"]
-}

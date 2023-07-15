@@ -66,7 +66,7 @@ export default function Post({ post }: PostProps) {
       <img src={post.data.banner.url} alt="Banner" className={styles.banner} />
       <main className={commonStyles.container}>
         <div className={styles.post}>
-          <div className={styles.postTop}>
+          <div className={styles.postTitle}>
             <h1>{post.data.title}</h1>
             <ul>
               <li>
@@ -132,6 +132,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       post: response,
     },
-    revalidate: 1800,
+    revalidate: 1800, // 30 minutes
   };
 };

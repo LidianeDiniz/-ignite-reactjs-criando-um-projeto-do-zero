@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { ReactElement } from 'react';
 
 export default class MyDocument extends Document {
-  render() {
+  render(): ReactElement {
     return (
-      <Html>
+      <Html lang="pt-BR">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />

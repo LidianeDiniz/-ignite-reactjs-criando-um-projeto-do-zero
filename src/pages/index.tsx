@@ -3,8 +3,10 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { FiCalendar, FiUser } from 'react-icons/fi';
 import { ptBR } from 'date-fns/locale';
-import { useState } from 'react';
+
 import Head from 'next/head';
+
+import { useState } from 'react';
 import Header from '../components/Header';
 import { getPrismicClient } from '../services/prismic';
 import commonStyles from '../styles/common.module.scss';
@@ -80,7 +82,7 @@ export default function Home({ postsPagination }: HomeProps) {
 
         <div className={styles.posts}>
           {posts.map(post => (
-            <Link key={post.uid} href={`/post/${post.uid}`}  legacyBehavior>
+            <Link key={post.uid} href={`/post/${post.uid}`}>
               <a className={styles.post}>
                 <strong>{post.data.title}</strong>
                 <p>{post.data.subtitle}</p>
@@ -130,5 +132,3 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
-
-
